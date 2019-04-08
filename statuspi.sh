@@ -24,8 +24,6 @@ for adress in ${ip[@]} ; do
     workdir=$(pwd);
     workname=${adress};
     worknameshort=$(cut -d'.' -f4<<<$workname)
-    echo $workname > $workdir/$worknameshort.js
-    echo $status >> $workdir/$worknameshort.js
     # upload $data.js to webspace
     curl -T $worknameshort.js -u user:pass ftp://server.net/
     # clean up the mess
