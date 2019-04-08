@@ -14,7 +14,6 @@ passwd=pass #password for ssh
 
 #!/bin/bash
 for adress in ${ip[@]} ; do
-    echo "Server: ${adress}"
     ping -q -c1 ${adress} > /dev/null
     if [ $? -eq 0 ]
     then
